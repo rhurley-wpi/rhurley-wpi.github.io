@@ -9,24 +9,20 @@
     header {
       background-image: url('wpi-header.jpg');
       background-size: cover;
-      background-position: center;
+      background-position: center bottom;
       color: white;
-      padding: 3rem 1rem 2rem;
+      padding: 3rem 1rem 6rem;
       position: relative;
-      text-align: left;
+      text-align: center;
     }
 
     .header-wrapper {
       max-width: 1200px;
       margin: 0 auto;
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-
-    .header-main {
-      margin-left: 2rem;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     .header-main h1,
@@ -41,9 +37,11 @@
     }
 
     .header-contact {
+      position: absolute;
+      bottom: 2rem;
+      left: 3rem;
       text-align: left;
       color: white;
-      margin-right: 2rem;
     }
 
     .header-contact p {
@@ -98,17 +96,18 @@
         <h1>Rachel Hurley</h1>
         <h2>PhD Student – Civil, Environmental, and Architectural Engineering</h2>
       </div>
-      <div class="header-contact">
-        <p><strong>Worcester Polytechnic Institute | <a href="mailto:rhurley@wpi.edu">rhurley@wpi.edu</a></strong></p>
-        <div class="center-links">
-          <a href="https://scholar.google.com/citations?user=VKeRPwMAAAAJ">Google Scholar</a>
-          <a href="https://linkedin.com/in/rachel-hurley1">LinkedIn</a>
-          <a href="https://users.wpi.edu/~sliu6/">Lab Website</a>
-        </div>
+    </div>
+    <div class="header-contact">
+      <p><strong>Worcester Polytechnic Institute | <a href="mailto:rhurley@wpi.edu">rhurley@wpi.edu</a></strong></p>
+      <div class="center-links">
+        <a href="https://scholar.google.com/citations?user=VKeRPwMAAAAJ">Google Scholar</a>
+        <a href="https://linkedin.com/in/rachel-hurley1">LinkedIn</a>
+        <a href="https://users.wpi.edu/~sliu6/">Lab Website</a>
       </div>
     </div>
   </header>
   <main>
+
 
     <section id="about">
       <h2>About Me</h2>
