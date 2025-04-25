@@ -7,12 +7,16 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     header {
-      background-image: url('1.png.jpg');
+      background-image: url('wpi-header.jpg');
       background-size: cover;
       background-position: center;
       color: white;
-      padding: 4rem 1rem;
-      text-align: center;
+      padding: 6rem 1rem 8rem;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
     }
 
     header h1,
@@ -21,20 +25,45 @@
     header a {
       color: white;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+      margin-left: 2rem;
+    }
+
+    .center-links {
+      margin-left: 2rem;
+      margin-top: 1rem;
+    }
+
+    .center-links a {
+      margin-right: 1.5rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .wrap-img,
+    .wrap-img-left {
+      width: 30%;
+      margin: 0 1rem 1rem 0;
+      border-radius: 6px;
     }
 
     .wrap-img {
       float: right;
-      width: 45%;
       margin: 0 0 1rem 1rem;
-      border-radius: 6px;
     }
 
     .wrap-img-left {
       float: left;
-      width: 45%;
-      margin: 0 1rem 1rem 0;
-      border-radius: 6px;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    figure figcaption {
+      font-size: 0.85rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
     }
 
     .bio::after {
