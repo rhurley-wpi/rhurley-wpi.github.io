@@ -11,37 +11,43 @@
       background-size: cover;
       background-position: center;
       color: white;
-      padding: 5rem 1rem 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
+      padding: 3rem 1rem 2rem;
       position: relative;
-      text-align: center;
+      text-align: left;
     }
 
-    header h1,
-    header h2 {
+    .header-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .header-main {
+      margin-left: 2rem;
+    }
+
+    .header-main h1,
+    .header-main h2 {
+      margin: 0.5rem 0;
       color: white;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
-      margin: 0.3rem;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
     }
 
-    header h2 {
+    .header-main h2 {
       font-weight: bold;
     }
 
     .header-contact {
-      color: white;
-      margin-top: 1rem;
       text-align: left;
-      position: absolute;
-      left: 3rem;
-      bottom: 2rem;
+      color: white;
+      margin-right: 2rem;
     }
 
     .header-contact p {
-      margin: 0.3rem 0;
+      margin: 0.5rem 0;
     }
 
     .header-contact a {
@@ -87,14 +93,18 @@
 </head>
 <body>
   <header>
-    <h1>Rachel Hurley</h1>
-    <h2>PhD Student – Civil, Environmental, and Architectural Engineering</h2>
-    <div class="header-contact">
-      <p><strong>Worcester Polytechnic Institute | <a href="mailto:rhurley@wpi.edu">rhurley@wpi.edu</a></strong></p>
-      <div class="center-links">
-        <a href="https://scholar.google.com/citations?user=VKeRPwMAAAAJ">Google Scholar</a>
-        <a href="https://linkedin.com/in/rachel-hurley1">LinkedIn</a>
-        <a href="https://users.wpi.edu/~sliu6/">Lab Website</a>
+    <div class="header-wrapper">
+      <div class="header-main">
+        <h1>Rachel Hurley</h1>
+        <h2>PhD Student – Civil, Environmental, and Architectural Engineering</h2>
+      </div>
+      <div class="header-contact">
+        <p><strong>Worcester Polytechnic Institute | <a href="mailto:rhurley@wpi.edu">rhurley@wpi.edu</a></strong></p>
+        <div class="center-links">
+          <a href="https://scholar.google.com/citations?user=VKeRPwMAAAAJ">Google Scholar</a>
+          <a href="https://linkedin.com/in/rachel-hurley1">LinkedIn</a>
+          <a href="https://users.wpi.edu/~sliu6/">Lab Website</a>
+        </div>
       </div>
     </div>
   </header>
