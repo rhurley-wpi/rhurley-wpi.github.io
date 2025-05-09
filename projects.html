@@ -1,60 +1,167 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Research & Projects – Rachel Hurley</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    header {
+      background-image: url('wpi-header.jpg');
+      background-size: cover;
+      background-position: center 45%;
+      color: white;
+      padding: 6rem 1rem 9rem;
+      position: relative;
+      text-align: center;
+    }
+
+    nav {
+      background: #a6192e;
+      padding: 0.75rem 1.5rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 1.2rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .header-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header-main h1,
+    .header-main h2 {
+      margin: 0.3rem 0;
+      color: white;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    }
+
+    .header-main h2 {
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+
+    .header-contact {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 3rem;
+      text-align: left;
+      color: white;
+    }
+
+    .header-contact p {
+      margin: 0.5rem 0;
+    }
+
+    .header-contact a {
+      margin-right: 1rem;
+      font-weight: bold;
+      color: #aad4ff;
+      text-decoration: none;
+    }
+
+    .wrap-img,
+    .wrap-img-left {
+      width: 30%;
+      margin: 0 1rem 1rem 0;
+      border-radius: 6px;
+    }
+
+    .wrap-img {
+      float: right;
+      margin: 0 0 1rem 1rem;
+    }
+
+    .wrap-img-left {
+      float: left;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    figure figcaption {
+      font-size: 0.85rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+
+    .bio::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    main {
       padding: 2rem;
       max-width: 1000px;
       margin: auto;
-      line-height: 1.6;
-    }
-    figure {
-      margin: 2rem 0;
-      text-align: center;
-    }
-    img {
-      max-width: 90%;
-      border-radius: 8px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-    figcaption {
-      font-size: 0.9rem;
-      color: #555;
-    }
-    a.button {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.5rem 1.2rem;
-      background: #eee;
-      color: #333;
-      text-decoration: none;
-      border-radius: 6px;
     }
   </style>
 </head>
 <body>
-  <h1>Recent and Current Work</h1>
+  <header>
+    <div class="header-wrapper">
+      <div class="header-main">
+        <h1>Rachel Hurley</h1>
+        <h2>PhD Candidate – Civil, Environmental, and Architectural Engineering</h2>
+      </div>
+    </div>
+    <div class="header-contact">
+      <p><strong>Worcester Polytechnic Institute | <a href="mailto:rhurley@wpi.edu">rhurley@wpi.edu</a></strong></p>
+      <div class="center-links">
+        <a href="https://scholar.google.com/citations?user=VKeRPwMAAAAJ">Google Scholar</a>
+        <a href="https://linkedin.com/in/rachel-hurley1">LinkedIn</a>
+        <a href="https://users.wpi.edu/~sliu6/">Lab Website</a>
+      </div>
+    </div>
+  </header>
 
-  <p>I currently serve as the <a href="https://www.isiaq.org/isiaq_board_of_directors.php" target="_blank">student representative to ISIAQ</a>, where I organize webinars, student events, and networking programs. I’m also chairing the student engagement committee for the 2025 <a href="https://hb2025.co.in/isiaq-autumn-school.html" target="_blank">Healthy Building Asia Autumn School</a>.</p>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="resume.html">Resume</a>
+    <a href="projects.html">Research & Projects</a>
+  </nav>
 
-  <figure>
-    <img src="IMG_5233 (3).jpg" alt="Operating VOCUS CI-ToF">
-    <figcaption>Operating VOCUS CI-ToF at Aerodyne Research</figcaption>
-  </figure>
+  <main>
+    <section id="more-detail">
+      <h2>Recent and Current Work</h2>
+      <div class="two-col" style="align-items: flex-start;">
+        <div class="bio">
+          <figure class="wrap-img">
+            <img src="IMG_5233 (3).jpg" alt="Operating VOCUS CI-ToF" />
+            <figcaption>Operating VOCUS CI-ToF at Aerodyne Research.</figcaption>
+          </figure>
 
-  <p>In Fall 2024, I worked at Aerodyne Research through the NSF GEOHEALTH INTERN program on wildfire smoke re-emission and VOC analysis using PTR-ToF-MS instrumentation.</p>
+          <p>I currently serve as the <a href="https://www.isiaq.org/isiaq_board_of_directors.php" target="_blank">student representative to ISIAQ</a>, working with professionals in the field of indoor air to build out student mentoring and activities. In this role I have organized a webinar focused on successful academic paper writing, facilitate the student LinkedIn page and highlight student achievements, and develop networking events for students at conferences. I am working towards expanding the scope of ISIAQ student engagement with more networking opportunities and opportunities for students to share their work with the society. I am also chairing the student engagement committee for the 2025 <a href="https://hb2025.co.in/isiaq-autumn-school.html" target="_blank">Healthy Building Asia Autumn School</a>, where I’m coordinating a two-day international pre-conference program for students.</p>
 
-  <figure>
-    <img src="IMG_3543.jpg" alt="Rachel field vehicle">
-    <figcaption>Fieldwork with the Home Ignition Zone Project in Paradise, CA</figcaption>
-  </figure>
+          <p>In the Fall of 2024 I worked as an intern with Aerodyne Research through the NSF GEOHEALTH INTERN program. This research focuses on smoke transport and the role of building material surfaces in re-emitting deposited pollutants. The project involves the use of VOCUS PTR-ToF-CIMS, which allows real-time mass spectrometry analysis of VOCs in indoor environments.</p>
 
-  <p>In Summer 2024, I worked with San Jose State's <a href="https://fireecology.wixsite.com/katewilkin/people" target="_blank">Home Ignition Zone Project</a> using field surveys and drone data to evaluate wildfire preparedness across California communities.</p>
-
-  <a href="index.html" class="button">← Back to Home</a>
+          <p>
+            <figure class="wrap-img-left">
+              <img src="IMG_3543.jpg" alt="Rachel standing by field vehicle" />
+              <figcaption>Fieldwork with the Home Ignition Zone Project in Paradise, California.</figcaption>
+            </figure>
+            In summer 2024, I worked with the <a href="https://fireecology.wixsite.com/katewilkin/people" target="_blank">Home Ignition Zone Project team</a> at San Jose State University to assess community wildfire preparedness using field surveys and drone imagery. We visited homes in three California regions and analyzed how preparedness varies with landscape and built environment characteristics.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
