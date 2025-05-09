@@ -5,6 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About – Rachel Hurley</title>
   <style>
+    nav {
+      background: #a6192e;
+      padding: 0.75rem 1.5rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 1.2rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     body {
       font-family: Arial, sans-serif;
       padding: 2rem;
@@ -12,30 +29,31 @@
       margin: auto;
       line-height: 1.6;
     }
+
     .headshot {
       max-width: 250px;
       border-radius: 10px;
       float: left;
       margin-right: 1rem;
     }
-    a.button {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.5rem 1.2rem;
-      background: #eee;
-      color: #333;
-      text-decoration: none;
-      border-radius: 6px;
-    }
+
     h1 {
       margin-bottom: 0.5rem;
     }
+
     .clear {
       clear: both;
     }
   </style>
 </head>
 <body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="resume.html">Resume</a>
+    <a href="projects.html">Research & Projects</a>
+  </nav>
+
   <h1>About Me</h1>
   <img src="profile.jpg" alt="Rachel Hurley" class="headshot">
   <p>I am a second-year PhD candidate in Civil Engineering at Worcester Polytechnic Institute, advised by Professor Shichao Liu. My research bridges environmental engineering and public health, with a focus on indoor air quality, wildfire smoke exposure, occupant health and behavior. I am eager to learn more about community-engaged research practices, developing smoke or natural disaster readiness plans, and am looking to expand the interdisciplinary nature of my work.</p>
@@ -43,6 +61,5 @@
   <p>My current projects examine re-emission of wildfire-sourced pollutants from building materials. Previously, I have investigated the impacts of elevated carbon dioxide exposure due to mask-wearing on student cognition during the COVID-19 pandemic. As an undergraduate student at Lafayette College, my research focused on predicting flash flooding behaviors in the mid-Atlantic region.</p>
 
   <div class="clear"></div>
-  <a href="index.html" class="button">← Back to Home</a>
 </body>
 </html>
