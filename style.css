@@ -1,93 +1,78 @@
-:root{
-  --brand:#a6192e;   /* maroon */
-  --ink:#2a2a2a;
-  --muted:#6f6f6f;
-  --line:#e6e6e6;
-  --bg:#f7f7f8;
-  --link:#0056b3;
-  --badge:#f1f1f4;
+/* --- Clean resume style (no cards) --- */
+body { background: #f7f7f8; }
+
+.page,
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
 }
 
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  color:var(--ink);
-  background:var(--bg);
-  line-height:1.6;
+/* Kill the card look on resume sections */
+main section{
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 0 1.25rem !important;
+  margin: 1.5rem 0 !important;
 }
 
-/* Top nav – slim */
-nav.site-nav{
-  background:#fff;
-  border-bottom:1px solid var(--line);
-}
-nav.site-nav .container{
-  max-width:1100px; margin:0 auto; padding:.75rem 1rem;
-  display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;
-}
-nav.site-nav a{
-  color:var(--ink); text-decoration:none; font-weight:600; padding:.25rem .5rem; border-radius:8px;
-}
-nav.site-nav a.active, nav.site-nav a:hover{ background:var(--badge) }
-
-/* Page layout */
-.page{
-  max-width:1100px; margin:0 auto; padding:2rem 1rem 3rem;
-}
-.layout{
-  display:grid; grid-template-columns: 300px 1fr; gap:2rem;
-}
-@media (max-width: 900px){
-  .layout{ grid-template-columns:1fr }
-}
-
-/* Sidebar */
-.sidebar{
-  position:relative;
-}
-.sidebar .card{
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:14px;
-  padding:1.25rem;
-}
-.sidebar .name{
-  font-size:1.6rem; font-weight:800; margin:0;
-}
-.sidebar .title{
-  margin:.25rem 0 1rem; color:var(--muted); font-weight:700;
-}
-.sidebar .block + .block{ margin-top:1.25rem; }
-.sidebar h3{
-  font-size:.9rem; letter-spacing:.08em; color:var(--muted); text-transform:uppercase;
-  margin:0 0 .5rem; font-weight:800;
-}
-.sidebar a{ color:var(--link); text-decoration:none }
-.sidebar a:hover{ text-decoration:underline }
-.contact li, .social li{ list-style:none; margin:.25rem 0 }
-.skills{ display:flex; flex-wrap:wrap; gap:.4rem }
-.badge{
-  background:var(--badge); border:1px solid var(--line); color:var(--ink);
-  padding:.25rem .55rem; border-radius:999px; font-size:.85rem; white-space:nowrap;
-}
-
-/* Main content */
-.content section + section{ margin-top:1.75rem }
+/* Section headers like the example */
 .section-title{
-  font-size:1.1rem; font-weight:800; letter-spacing:.04em; text-transform:uppercase; color:var(--brand);
-  border-bottom:2px solid var(--brand); padding-bottom:.35rem; margin:0 0 .75rem;
+  font: 800 1.05rem/1.2 system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #a6192e;            /* maroon */
+  border-bottom: 2px solid #a6192e;
+  padding-bottom: .35rem;
+  margin: 0 0 .85rem;
 }
-.entry{ padding: .75rem 0; border-bottom:1px solid var(--line) }
-.entry:last-child{ border-bottom:0 }
-.entry h4{ margin:.15rem 0; font-size:1.05rem }
-.entry .meta{ color:var(--muted); font-size:.95rem }
-.entry ul{ margin:.5rem 0 .25rem 1rem }
-.entry li + li{ margin-top:.3rem }
+
+/* Each resume line item */
+.resume-entry{
+  padding: .85rem 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+.resume-entry:last-child{ border-bottom: 0; }
+
+/* Top row: role/company on left, date/location on right */
+.resume-entry .topline{
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.resume-entry .role{
+  font-weight: 700;
+}
+.resume-entry .org{
+  font-weight: 600;
+}
+.resume-entry .meta{
+  color: #6f6f6f;
+  white-space: nowrap;
+}
+
+/* Bullets */
+.resume-entry ul{ margin: .5rem 0 .25rem 1.25rem; }
+.resume-entry li + li{ margin-top: .28rem; }
+.resume-entry li::marker{ color: #a6192e; }
+
+/* Minor heading in-body (e.g., degree name) */
+h4.inline{
+  margin: .2rem 0 0;
+  font-weight: 700;
+  font-size: 1rem;
+}
 
 /* Links */
-a{ color:var(--link) }
+a { color: #0056b3; }
 
-/* Footer */
-.site-footer{ text-align:center; color:var(--muted); padding:2rem 0 }
+/* Print cleanly */
+@media print{
+  body{ background:#fff;}
+  nav.site-nav{ display:none; }
+  .page, .container{ padding: 0 0; max-width: 100%; }
+  .section-title{ border-color:#000; color:#000; }
+  a{ color:#000; text-decoration: underline; }
+}
