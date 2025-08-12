@@ -1,47 +1,82 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Research &amp; Projects – Rachel Hurley</title>
-<link href="style.css" rel="stylesheet"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Research & Projects – Rachel Hurley</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* keep project images tidy, matching resume style */
+    .proj-fig img{ max-width: 220px; height:auto; border-radius:8px; }
+    .proj-fig figcaption{ font-size:.85rem; color:var(--muted); text-align:center; margin-top:.35rem; }
+    .float-right{ float:right; margin:0 0 1rem 1rem; }
+    .float-left{  float:left;  margin:0 1rem 1rem 0; }
+    .prose::after{ content:""; display:block; clear:both; }
+    @media (max-width: 800px){
+      .float-right,.float-left{ float:none; margin:.5rem 0 1rem 0; }
+      .proj-fig img{ max-width:100%; }
+    }
+  </style>
 </head>
 <body>
-<nav aria-label="Main" class="site-nav">
-<div class="container">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="resume.html">Resume</a>
-<a class="active" href="projects.html">Research &amp; Projects</a>
-</div>
+
+<nav class="site-nav" aria-label="Main">
+  <div class="container">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="resume.html">Resume</a>
+    <a class="active" href="projects.html">Research & Projects</a>
+  </div>
 </nav>
-<header class="subhero">
-<div class="container">
-<h1 class="page-title">Research &amp; Projects</h1>
-<p class="page-kicker">Indoor air quality • Wildfire smoke • Occupant wellbeing</p>
-</div>
-</header>
-<main class="container">
-<section id="more-detail">
-<h2>Recent and Current Work</h2>
-<div class="prose">
-<figure class="float-right">
-<img alt="Operating VOCUS PTR-ToF-CIMS at Aerodyne Research" src="IMG_3543.jpg" style="max-width: 200px; height: auto; border-radius: 6px;"/>
-<figcaption>Operating VOCUS PTR-ToF-CIMS at Aerodyne Research.</figcaption>
-</figure>
-<p>I currently serve as the <a href="https://www.isiaq.org/isiaq_board_of_directors.php" target="_blank">student representative to ISIAQ</a>, working with professionals in the field of indoor air to build out student mentoring and activities. In this role I have organized a webinar focused on successful academic paper writing, facilitate the student LinkedIn page and highlight student achievements, and develop networking events for students at conferences. I am working towards expanding the scope of ISIAQ student engagement with more networking opportunities and opportunities for students to share their work with the society. I am also chairing the student engagement committee for the 2025 <a href="https://hb2025.co.in/isiaq-autumn-school.html" target="_blank">Healthy Building Asia Autumn School</a>, where I’m coordinating a two-day international pre-conference program for students.</p>
-<p>In the Fall of 2024 I worked as an intern with Aerodyne Research through the NSF GEOHEALTH INTERN program. This research focuses on smoke transport and the role of building material surfaces in re-emitting deposited pollutants. The project involves the use of VOCUS PTR-ToF-CIMS, which allows real-time mass spectrometry analysis of VOCs in indoor environments.</p>
-<figure class="float-left">
-<img alt="Fieldwork with the Home Ignition Zone Project in Paradise, California" src="IMG_5233 (3).jpg" style="max-width: 200px; height: auto; border-radius: 6px;"/>
-<figcaption>Fieldwork with the Home Ignition Zone Project in Paradise, California.</figcaption>
-</figure>
-<p>In summer 2024, I worked with the <a href="https://fireecology.wixsite.com/katewilkin/people" target="_blank">Home Ignition Zone Project team</a> at San Jose State University to assess community wildfire preparedness using field surveys and drone imagery. We visited homes in three California regions and analyzed how preparedness varies with landscape and built environment characteristics.</p>
-</div>
-</section>
+
+<main class="page container">
+  <!-- Same section header + row style as resume -->
+  <section id="recent">
+    <h2 class="section-title">Recent &amp; Current Work</h2>
+
+    <div class="resume-entry">
+      <div class="topline">
+        <div><span class="role">Leadership &amp; Community</span></div>
+        <div class="meta">ISIAQ Student Representative • HBA Autumn School Coordinator (2025)</div>
+      </div>
+      <div class="prose">
+        <figure class="proj-fig float-right">
+          <img src="IMG_3543.jpg" alt="Operating VOCUS PTR-ToF-CIMS at Aerodyne Research">
+          <figcaption>VOCUS PTR-ToF-CIMS, Aerodyne Research</figcaption>
+        </figure>
+        <p>I organize student programming for ISIAQ (webinars, mentoring, and conference networking) and chair the student engagement committee for the 2025 Healthy Buildings Asia Autumn School, coordinating a two-day pre-conference program for students.</p>
+        <p>Links: <a href="https://www.isiaq.org/isiaq_board_of_directors.php" target="_blank">ISIAQ Student Representative</a> •
+        <a href="https://hb2025.co.in/isiaq-autumn-school.html" target="_blank">ISIAQ Autumn School 2025</a></p>
+      </div>
+    </div>
+
+    <div class="resume-entry">
+      <div class="topline">
+        <div><span class="role">NSF GEOHEALTH INTERN</span> — Aerodyne Research</div>
+        <div class="meta">Fall 2024</div>
+      </div>
+      <p>Investigating transport and re-emission of wildfire-sourced VOCs from building materials using VOCUS PTR-ToF-CIMS to capture real-time indoor chemistry.</p>
+    </div>
+
+    <div class="resume-entry">
+      <div class="topline">
+        <div><span class="role">Home Ignition Zone Project</span> — San Jose State University</div>
+        <div class="meta">Summer 2024</div>
+      </div>
+      <div class="prose">
+        <figure class="proj-fig float-left">
+          <img src="IMG_5233 (3).jpg" alt="Fieldwork with the Home Ignition Zone Project in Paradise, California">
+          <figcaption>Fieldwork in Paradise, California</figcaption>
+        </figure>
+        <p>Fieldwork across three regions in California assessing community wildfire preparedness using surveys and drone imagery; analyzed links between preparedness, landscape, and built-environment characteristics.</p>
+        <p>Team: <a href="https://fireecology.wixsite.com/katewilkin/people" target="_blank">Home Ignition Zone Team</a></p>
+      </div>
+    </div>
+
+  </section>
 </main>
-<footer class="site-footer">
-<div class="container">© Rachel Hurley</div>
-</footer>
+
+<footer class="site-footer">© Rachel Hurley</footer>
 </body>
 </html>
+
