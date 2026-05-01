@@ -65,16 +65,23 @@
 
     /* STUFF CLASS (Education -> Publication sections) */
     .stuff {
- /*     padding: 0 10%;           /* Matches the Hero and About indentation */
       max-width: 1100px;        /* Prevents text from stretching too wide */
       margin: 0 auto;           /* Centers the container on the screen */
       text-align: left;         /* Ensures all text is flush left */
+      line-height: 1.8;      /* Increases space between lines of text */
     }
     
     /* Ensure headings inside .stuff are aligned */
     .stuff h2.section-title {
+      margin-top: 3rem;      /* Space above the title */
+      margin-bottom: 1.5rem; /* Space below the title */
       margin-left: 0;           
       display: inline-block;
+    }
+    
+    /* Adds space between individual entries (like different schools or awards) */
+    .stuff p, .stuff div {
+      margin-bottom: 1.2rem; 
     }
 
     /* 5. FADE-IN ANIMATION (Fail-safe: Default to visible) */
@@ -170,23 +177,29 @@
     <p><strong>Indoor Air Conference Student Poster Competition</strong> | Honorable Mention | July 2024</p>
     <p><strong>WPI Duane D. Pearsall Endowment Innovation Jam Finalist</strong> | April 2024</p>
   </div>
-  </section>
-
-    <div class="stuff" class="reveal">
+    
+  <div class="stuff" class="reveal">
     <h2 class="section-title">Publications</h2>
-    <p style="margin-bottom: 1.2rem;">Hurley, R., et al. (2026). <strong>Indoor wildfire smoke perceptions “nudge” mitigation behaviors</strong>. <em>Indoor Environments</em>. <a href="https://doi.org/10.1016/j.indenv.2026.100150" target="_blank">[DOI]</a></p>
-    <p style="margin-bottom: 1.2rem;">Hurley, R., et al. (2025). <strong>Impact of mask-wearing-related CO2 exposure</strong>. <em>Building and Environment</em>. <a href="https://doi.org/10.1016/j.buildenv.2025.113537" target="_blank">[DOI]</a></p>
-    <p style="margin-bottom: 1.2rem;">Hurley, R. F., et al. (2024). <strong>High CO2 exposure unlikely to impair cognition</strong>. <em>Energy and Built Environment</em>. <a href="https://doi.org/10.1016/j.enbenv.2024.05.005" target="_blank">[DOI]</a></p>
+    <p>Hurley, R., et al. (2026). <strong>Indoor wildfire smoke perceptions “nudge” mitigation behaviors</strong>. <em>Indoor Environments</em>. <a href="https://doi.org/10.1016/j.indenv.2026.100150" target="_blank">[DOI]</a></p>
+    <p>Hurley, R., et al. (2025). <strong>Impact of mask-wearing-related CO2 exposure</strong>. <em>Building and Environment</em>. <a href="https://doi.org/10.1016/j.buildenv.2025.113537" target="_blank">[DOI]</a></p>
+    <p>Hurley, R. F., et al. (2024). <strong>High CO2 exposure unlikely to impair cognition</strong>. <em>Energy and Built Environment</em>. <a href="https://doi.org/10.1016/j.enbenv.2024.05.005" target="_blank">[DOI]</a></p>
   </div>
   </section>
 
-
-  <section id="Recent Projects and Service" class="reveal">
-    <h2 class="section-title">Publications</h2>
-    <p style="margin-bottom: 1.2rem;">Hurley, R., et al. (2026). <strong>Indoor wildfire smoke perceptions “nudge” mitigation behaviors</strong>. <em>Indoor Environments</em>. <a href="https://doi.org/10.1016/j.indenv.2026.100150" target="_blank">[DOI]</a></p>
-    <p style="margin-bottom: 1.2rem;">Hurley, R., et al. (2025). <strong>Impact of mask-wearing-related CO2 exposure</strong>. <em>Building and Environment</em>. <a href="https://doi.org/10.1016/j.buildenv.2025.113537" target="_blank">[DOI]</a></p>
-    <p style="margin-bottom: 1.2rem;">Hurley, R. F., et al. (2024). <strong>High CO2 exposure unlikely to impair cognition</strong>. <em>Energy and Built Environment</em>. <a href="https://doi.org/10.1016/j.enbenv.2024.05.005" target="_blank">[DOI]</a></p>
+  <section id="research" class="reveal">
+    <h2 class="section-title">Recent Projects and Service</h2>
+    <div class="about-container">
+      <div class="about-text">
+        <p>
+          Placeholder
+        </p>
+      </div>
+      <div class="about-photo">
+        <img src="IMG_3543.jpg" alt="Rachel working">
+      </div>
+    </div>
   </section>
+  
 
     <script>
     const observer = new IntersectionObserver((entries) => {
