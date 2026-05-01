@@ -63,6 +63,21 @@
     .about-photo { flex: 1; text-align: center; }
     .about-photo img { width: 100%; max-width: 300px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
 
+    /* STUFF CLASS (Education -> Publication sections) */
+    .stuff {
+      padding: 0 10%;           /* Matches the Hero and About indentation */
+      max-width: 1100px;        /* Prevents text from stretching too wide */
+      margin: 0 auto;           /* Centers the container on the screen */
+      text-align: left;         /* Ensures all text is flush left */
+      background: #fcfcfc;
+    }
+    
+    /* Ensure headings inside .stuff are aligned */
+    .stuff h2.section-title {
+      margin-left: 0;           
+      display: inline-block;
+    }
+
     /* 5. FADE-IN ANIMATION (Fail-safe: Default to visible) */
     .reveal { 
       opacity: 1; 
@@ -130,32 +145,32 @@
     </div>
   </section>
 
-  <section id="resume" class="reveal" style="background: #fcfcfc;">
+  <section id="resume" class="reveal">
+  <div class="stuff">
     <h2 class="section-title">Education</h2>
-    <div style="margin-bottom: 2.5rem;">
-      <h4>Worcester Polytechnic Institute, Worcester, MA</h4>
-      <p>PhD Civil Engineering (in progress) | GPA 4.0 | Aug 2023 – Present</p>
+      <h4>Worcester Polytechnic Institute</h4>
+      <p>PhD Civil Engineering | GPA 4.0 | 2023 – Present</p>
       <br>
       <h4>Lafayette College, Easton, PA</h4>
       <p>BS Integrative Engineering: Environment & Energy | GPA 4.0 Co-Valedictorian | May 2023</p>
-    </div>
+  </div>
+  </section>
 
-<h2 class="section-title">Fellowships & Grants</h2>
+  <section class="reveal">
+  <div class="stuff">
+    <h2 class="section-title">Fellowships & Grants</h2>
+    <p><strong>National Science Foundation Graduate Research Fellow</strong> (2023)</p>
+  </div>
+  </section>
     
-    <div style="margin-bottom: 3.5rem;">
-      
-      <div style="margin-bottom: 2rem;">
-        <p style="margin-bottom: 0.8rem;">
-          <strong>Grant in aid</strong> – ya
-        </p>
-        
-        <p style="margin-bottom: 0.8rem;">
-          <strong>Fancy</strong> x
-        </p>
-      </div>
-      </div>
+  <section class="reveal">
+  <div class="stuff">
+    <h2 class="section-title">Awards & Honors</h2>
+    <p><strong>WPI Three Minute Thesis (3MT) Competition</strong> – Second Place (Feb 2026)</p>
+  </div>
+  </section>
+
     
-<h2 class="section-title">Awards & Honors</h2>
     
     <div style="margin-bottom: 3.5rem;">
       
