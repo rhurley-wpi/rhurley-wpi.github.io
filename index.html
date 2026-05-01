@@ -1,3 +1,32 @@
+/* RESUME LAYOUT STYLES */
+    .resume-layout { display: flex; gap: 4rem; }
+    .resume-sidebar { flex: 1; }
+    .resume-main-content { flex: 3; }
+    
+    .resume-group { margin-bottom: 3rem; }
+    .entry { margin-bottom: 1.5rem; }
+    .entry h4 { color: #333; font-size: 1.1rem; }
+    .meta { color: #888; font-size: 0.9rem; margin-bottom: 0.5rem; }
+    
+    .badge {
+      display: inline-block;
+      background: #eef3ed;
+      color: #4a6345;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      margin: 4px 2px;
+      font-weight: bold;
+    }
+    
+    .resume-list { padding-left: 1.2rem; font-size: 0.95rem; color: #555; }
+
+    @media (max-width: 900px) {
+      .resume-layout { flex-direction: column; }
+      .resume-sidebar { order: 2; }
+      .resume-main-content { order: 1; }
+    }
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -144,9 +173,82 @@
     </div>
   </section>
 
-  <section id="resume" class="reveal" style="background: #fcfcfc;">
-    <h2 class="section-title">Resume</h2>
-    <p>Content for your resume and CV goes here...</p>
+  <section id="resume" class="reveal" style="background: #f9f9f9; padding-top: 80px;">
+    <div class="resume-layout">
+      
+      <aside class="resume-sidebar">
+        <div class="resume-card">
+          <h3 style="margin-bottom: 1rem; color: #333; border-bottom: 2px solid #a9c8a2; display: inline-block;">Skills</h3>
+          <div class="skills-container">
+            <span class="badge">Mass Balance Modelling</span>
+            <span class="badge">VOCUS-CI-ToF</span>
+            <span class="badge">Statistical Analysis (R)</span>
+            <span class="badge">Thematic Analysis</span>
+            <span class="badge">Qualitative & Quantitative Research</span>
+          </div>
+          
+          <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: #333; border-bottom: 2px solid #a9c8a2; display: inline-block;">Links</h3>
+          <ul style="list-style: none; font-size: 0.9rem;">
+            <li><a href="https://www.scliu.com/" target="_blank" style="color: #666; text-decoration: none;">Lab Website</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <div class="resume-main-content">
+        
+        <div class="resume-group">
+          <h2 class="section-title">Education</h2>
+          <div class="entry">
+            <h4>Worcester Polytechnic Institute - PhD Civil Engineering (in progress)</h4>
+            <p class="meta">GPA 4.0 • Aug 2023 – Present</p>
+          </div>
+          <div class="entry">
+            <h4>Lafayette College - BS Integrative Engineering: Environment & Energy</h4>
+            <p class="meta">GPA 4.0 Co-Valedictorian • Graduation May 20, 2023</p>
+          </div>
+        </div>
+
+        <div class="resume-group">
+          <h2 class="section-title">Fellowships and Grants</h2>
+          <div class="entry">
+            <h4>National Science Foundation Graduate Research Fellow</h4>
+            <p class="meta">Awarded March 31, 2023</p>
+          </div>
+          <div class="entry">
+            <h4>ASHRAE Grant-in-Aid Award</h4>
+            <p class="meta">Awarded May 1, 2025</p>
+          </div>
+        </div>
+
+        <div class="resume-group">
+          <h2 class="section-title">Research Experience</h2>
+          <div class="entry">
+            <h4>Graduate Research Assistant - WPI</h4>
+            <p class="meta">Sep 2023 - Present</p>
+            <ul class="resume-list">
+              <li>Research focused on indoor wildfire smoke transport and human behavior.</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <h4>NSF GEOHEALTH Internship - WPI & Aerodyne Research Inc</h4>
+            <p class="meta">Sept 2024 - Mar 2025</p>
+            <ul class="resume-list">
+              <li>Designed CIMS experiments on smoke sorption and emission from building materials. Publication in preparation.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="resume-group">
+          <h2 class="section-title">Publications</h2>
+          <div class="entry">
+            <p><strong>Indoor Wildfire Smoke Perceptions “Nudge” Mitigation Behaviors</strong>, <em>Indoor Environments</em> (2024)</p>
+            <p><strong>High CO2 exposure due to facemask wear is unlikely to impair cognition...</strong>, <em>Energy and Built Environment</em> (2024)</p>
+            <p><strong>Drivers and Buffers of Stream Flashiness in the Mid-Atlantic United States</strong>, <em>Hydrological Processes</em> (2024)</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </section>
 
   <section id="research" class="reveal">
