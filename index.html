@@ -5,77 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rachel Hurley - Portfolio</title>
   <style>
-    /* 1. GLOBAL & SMOOTH SCROLLING */
+    /* GLOBAL STYLES */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; overflow-x: hidden; }
+    body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; }
 
-    /* 2. STICKY HEADER */
+    /* HEADER & NAV */
     header {
       position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.95);
-      padding: 1rem 2rem;
+      top: 0; width: 100%;
+      background: rgba(255, 255, 255, 0.98);
+      padding: 1rem 5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
-    header .logo { font-weight: bold; color: #333; text-decoration: none; }
-    nav a {
-      margin-left: 1.5rem;
-      text-decoration: none;
-      color: #555;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav a:hover { color: #a9c8a2; }
+    header .logo { font-weight: bold; font-size: 1.2rem; color: #333; text-decoration: none; }
+    nav a { margin-left: 2rem; text-decoration: none; color: #555; font-weight: 500; transition: 0.3s; }
+    nav a:hover { color: #8eab87; }
 
-    /* 3. SECTION STYLING */
-    section {
-      min-height: 100vh;
-      padding: 80px 10%; /* Extra top padding for the sticky header */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    /* 4. HERO SECTION (Your Original Cover) */
+    /* FULL WIDTH HERO SECTION */
     #hero {
-      padding: 0;
+      height: 80vh; /* Takes up 80% of the screen height */
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('wpi-header.jpg') center/cover no-repeat;
       display: flex;
-      flex-direction: row;
-    }
-    .left {
-      flex: 2;
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('wpi-header.jpg') center/cover;
+      align-items: center;
+      padding: 0 10%;
       color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 2rem;
     }
-    .right { flex: 1; background: #a9c8a2; display: flex; align-items: center; justify-content: center; }
-    .headshot { max-width: 80%; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.2); }
+    .hero-text h1 { font-size: 3.5rem; margin-bottom: 0.5rem; }
+    .hero-text h2 { font-size: 1.5rem; font-weight: 300; opacity: 0.9; }
 
-    /* 5. FADE-IN ANIMATION CLASSES */
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s ease-out;
-    }
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
+    /* CONTENT SECTIONS */
+    section { padding: 100px 10%; min-height: 60vh; }
+    h2.section-title { font-size: 2rem; margin-bottom: 2rem; border-bottom: 2px solid #a9c8a2; display: inline-block; padding-bottom: 5px; }
+
+    /* ABOUT ME SECTION WITH PHOTO */
+    .about-container { display: flex; align-items: flex-start; gap: 3rem; }
+    .about-text { flex: 2; }
+    .about-photo { flex: 1; }
+    .about-photo img { 
+      width: 100%; 
+      border-radius: 12px; 
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
     }
 
-    /* Responsive adjustment */
+    /* FADE-IN ANIMATION */
+    .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+
     @media (max-width: 768px) {
-      #hero { flex-direction: column; }
-      header { padding: 1rem; }
-      nav a { margin-left: 0.8rem; font-size: 0.9rem; }
+      .hero-text h1 { font-size: 2.5rem; }
+      .about-container { flex-direction: column; text-align: center; }
+      .about-photo { order: -1; max-width: 250px; margin: 0 auto; }
     }
   </style>
 </head>
@@ -86,56 +70,55 @@
     <nav>
       <a href="#about">About</a>
       <a href="#resume">Resume</a>
-      <a href="#projects">Research</a>
+      <a href="#research">Research</a>
     </nav>
   </header>
 
   <section id="hero">
-    <div class="left">
-      <div class="overlay-text">
-        <h1>Rachel Hurley</h1>
-        <h2>PhD Candidate – Civil, Environmental, and Architectural Engineering</h2>
-        <p style="margin-top:10px;">Worcester Polytechnic Institute (WPI)</p>
-      </div>
-    </div>
-    <div class="right">
-      <img src="profile.jpg" alt="Rachel Hurley" class="headshot">
+    <div class="hero-text">
+      <h1>Rachel Hurley</h1>
+      <h2>PhD Candidate – Civil, Environmental, & Architectural Engineering</h2>
+      <p>Worcester Polytechnic Institute (WPI)</p>
     </div>
   </section>
 
   <section id="about" class="reveal">
-    <h1>About Me</h1>
-    <p>Your "About" content goes here. It will fade in as you scroll down.</p>
+    <h2 class="section-title">About Me</h2>
+    <div class="about-container">
+      <div class="about-text">
+        <p>
+          I am a PhD student and researcher at WPI focusing on environmental health and indoor air quality. 
+          My work specifically examines the behavior of wildfire-sourced volatile organic compounds (VOCs) 
+          and how they penetrate and persist in common indoor materials.
+        </p>
+        <br>
+        <p>
+          Through my research, I aim to bridge the gap between engineering and social science to better 
+          protect public health during environmental disasters.
+        </p>
+      </div>
+      <div class="about-photo">
+        <img src="profile.jpg" alt="Rachel Hurley Headshot">
+      </div>
+    </div>
   </section>
 
-  <section id="resume" class="reveal" style="background: #f4f4f4;">
-    <h1>Resume</h1>
-    <p>Summary of your experience or a link to your full CV.</p>
-  </section>
+  <section id="resume" class="reveal" style="background: #fafafa;">
+    <h2 class="section-title">Resume</h2>
+    </section>
 
-  <section id="projects" class="reveal">
-    <h1>Research & Projects</h1>
-    <p>Detailed info on your wildfire VOC research, Mass Spectrometry, etc.</p>
-  </section>
+  <section id="research" class="reveal">
+    <h2 class="section-title">Research & Projects</h2>
+    </section>
 
   <script>
-    // FADE-IN ON SCROLL LOGIC
-    const observerOptions = {
-      threshold: 0.1 // Triggers when 10% of the section is visible
-    };
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
+        if (entry.isIntersecting) entry.target.classList.add('active');
       });
-    }, observerOptions);
+    }, { threshold: 0.1 });
 
-    // Target all sections with the 'reveal' class
-    document.querySelectorAll('.reveal').forEach(section => {
-      observer.observe(section);
-    });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
 
 </body>
