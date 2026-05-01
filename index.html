@@ -159,31 +159,17 @@
 
   <section id="research" class="reveal" style="background: #fcfcfc;">
     <h2 class="section-title">Recent Projects</h2>
-    <div style="margin-bottom: 3.5rem;">
-      <h3>ISIAQ Student Representative</h3>
-      <p><em>Board of Directors | 2024 – Present</em></p>
+    
+    <div style="margin-bottom: 3.5rem; text-align: left;">
+      <h3 style="font-size: 1.25rem; color: #222; margin-bottom: 5px;">ISIAQ Student Representative</h3>
+      <p style="font-style: italic; color: #666; margin-bottom: 10px;">Board of Directors | 2024 – Present</p>
       <p>Working to build student mentoring and networking activities for international air quality conferences.</p>
     </div>
 
-    <div style="margin-bottom: 3.5rem;">
-      <h3>NSF GEOHEALTH Intern — Aerodyne Research</h3>
-      <p><em>Fall 2024</em></p>
-      <img src="IMG_5233 (3).jpg" alt="Vocus CI-ToF" style="max-width: 450px; width: 100%; border-radius: 8px; margin: 15px 0;">
+    <div style="margin-bottom: 3.5rem; text-align: left;">
+      <h3 style="font-size: 1.25rem; color: #222; margin-bottom: 5px;">NSF GEOHEALTH Intern — Aerodyne Research</h3>
+      <p style="font-style: italic; color: #666; margin-bottom: 10px;">Fall 2024</p>
+      <img src="IMG_5233 (3).jpg" alt="Vocus CI-ToF" style="max-width: 450px; width: 100%; border-radius: 8px; margin: 15px 0; display: block;">
       <p>Real-time VOC analysis using Vocus CI-ToF mass spectrometry to study building material emissions.</p>
     </div>
   </section>
-
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  </script>
-
-</body>
-</html>
