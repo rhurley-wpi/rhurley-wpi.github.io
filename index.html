@@ -5,128 +5,138 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rachel Hurley - Portfolio</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    /* 1. GLOBAL & SMOOTH SCROLLING */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; overflow-x: hidden; }
 
-    body, html {
-      height: 100%;
-      font-family: Arial, sans-serif;
-    }
-
-    .container {
+    /* 2. STICKY HEADER */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 1rem 2rem;
       display: flex;
-      height: 100vh;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
+    header .logo { font-weight: bold; color: #333; text-decoration: none; }
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #555;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #a9c8a2; }
 
-    .left {
-      flex: 2;
-      background-image: url('wpi-header.jpg'); /* Replace with your actual WPI image */
-      background-size: cover;
-      background-position: center;
-      color: white;
-      position: relative;
-      padding: 2rem;
+    /* 3. SECTION STYLING */
+    section {
+      min-height: 100vh;
+      padding: 80px 10%; /* Extra top padding for the sticky header */
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
 
-    .overlay-text {
-      background-color: rgba(0, 0, 0, 0.5);
+    /* 4. HERO SECTION (Your Original Cover) */
+    #hero {
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+    }
+    .left {
+      flex: 2;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('wpi-header.jpg') center/cover;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       padding: 2rem;
-      border-radius: 12px;
-      max-width: 80%;
+    }
+    .right { flex: 1; background: #a9c8a2; display: flex; align-items: center; justify-content: center; }
+    .headshot { max-width: 80%; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.2); }
+
+    /* 5. FADE-IN ANIMATION CLASSES */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
     }
 
-    .overlay-text h1 {
-      font-size: 2.5rem;
-    }
-
-    .overlay-text h2 {
-      font-size: 1.25rem;
-      margin-top: 0.5rem;
-      font-weight: normal;
-    }
-
-    .nav-buttons {
-      margin-top: 2rem;
-    }
-
-    .nav-buttons a {
-      display: inline-block;
-      margin-right: 1rem;
-      padding: 0.75rem 1.5rem;
-      background: white;
-      color: #333;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 6px;
-      transition: background 0.3s;
-    }
-
-    .nav-buttons a:hover {
-      background: #ccc;
-    }
-
-  .right {
-  flex: 1;
-  background: #a9c8a2; /* soft green background */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-    .headshot {
-      max-width: 80%;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
-
+    /* Responsive adjustment */
     @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-      }
-
-      .left, .right {
-        flex: none;
-        height: 50%;
-      }
-
-      .overlay-text {
-        max-width: 100%;
-      }
+      #hero { flex-direction: column; }
+      header { padding: 1rem; }
+      nav a { margin-left: 0.8rem; font-size: 0.9rem; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
+
+  <header>
+    <a href="#hero" class="logo">Rachel Hurley</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#resume">Resume</a>
+      <a href="#projects">Research</a>
+    </nav>
+  </header>
+
+  <section id="hero">
     <div class="left">
       <div class="overlay-text">
-  <h1>Rachel Hurley</h1>
-  <h2>PhD Candidate – Civil, Environmental, and Architectural Engineering WPI</h2>
-  <div class="nav-buttons">
-    <a href="about.html">About</a>
-    <a href="resume.html">Resume</a>
-    <a href="projects.html">Research & Projects</a>
-  </div>
-  <div class="contact-info" style="margin-top: 2rem; font-size: 0.95rem;">
-    <p><strong>Email:</strong> <a href="mailto:rhurley@wpi.edu" style="color: #aad4ff;">rhurley@wpi.edu</a></p>
-    <p>
-      <a href="https://scholar.google.com/citations?user=VKeRPwMAAAAJ&hl=en" style="color: #aad4ff;">Google Scholar</a> |
-      <a href="https://www.linkedin.com/in/rachel-hurley1/" style="color: #aad4ff;">LinkedIn</a> |
-      <a href="https://www.scliu.com/" style="color: #aad4ff;">Lab Website</a>
-    </p>
-  </div>
-</div>
-
+        <h1>Rachel Hurley</h1>
+        <h2>PhD Candidate – Civil, Environmental, and Architectural Engineering</h2>
+        <p style="margin-top:10px;">Worcester Polytechnic Institute (WPI)</p>
+      </div>
     </div>
     <div class="right">
-      <img src="profile.jpg" alt="Rachel Hurley Headshot" class="headshot">
+      <img src="profile.jpg" alt="Rachel Hurley" class="headshot">
     </div>
-  </div>
+  </section>
+
+  <section id="about" class="reveal">
+    <h1>About Me</h1>
+    <p>Your "About" content goes here. It will fade in as you scroll down.</p>
+  </section>
+
+  <section id="resume" class="reveal" style="background: #f4f4f4;">
+    <h1>Resume</h1>
+    <p>Summary of your experience or a link to your full CV.</p>
+  </section>
+
+  <section id="projects" class="reveal">
+    <h1>Research & Projects</h1>
+    <p>Detailed info on your wildfire VOC research, Mass Spectrometry, etc.</p>
+  </section>
+
+  <script>
+    // FADE-IN ON SCROLL LOGIC
+    const observerOptions = {
+      threshold: 0.1 // Triggers when 10% of the section is visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, observerOptions);
+
+    // Target all sections with the 'reveal' class
+    document.querySelectorAll('.reveal').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+
 </body>
 </html>
