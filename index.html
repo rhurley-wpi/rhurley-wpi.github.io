@@ -8,7 +8,7 @@
     /* GLOBAL STYLES */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; }
+    body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; background-color: #fff; }
 
     /* HEADER & NAV */
     header {
@@ -26,40 +26,66 @@
     nav a { margin-left: 2rem; text-decoration: none; color: #555; font-weight: 500; transition: 0.3s; }
     nav a:hover { color: #8eab87; }
 
-    /* FULL WIDTH HERO SECTION */
+    /* HERO SECTION */
     #hero {
-      height: 80vh; /* Takes up 80% of the screen height */
-      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('wpi-header.jpg') center/cover no-repeat;
+      height: 85vh; 
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('wpi-header.jpg') center/cover no-repeat;
       display: flex;
       align-items: center;
       padding: 0 10%;
       color: white;
     }
-    .hero-text h1 { font-size: 3.5rem; margin-bottom: 0.5rem; }
-    .hero-text h2 { font-size: 1.5rem; font-weight: 300; opacity: 0.9; }
+    .hero-text h1 { font-size: 3.5rem; margin-bottom: 0.5rem; line-height: 1.1; }
+    .hero-text h2 { font-size: 1.6rem; font-weight: 300; line-height: 1.4; margin-bottom: 0.5rem; }
+    .hero-text p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 1.5rem; }
+
+    /* HERO LINKS */
+    .hero-links a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+      font-size: 0.95rem;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+      padding-bottom: 2px;
+      transition: all 0.3s ease;
+    }
+    .hero-links a:hover {
+      border-bottom-color: #fff;
+      opacity: 1 !important;
+    }
 
     /* CONTENT SECTIONS */
     section { padding: 100px 10%; min-height: 60vh; }
     h2.section-title { font-size: 2rem; margin-bottom: 2rem; border-bottom: 2px solid #a9c8a2; display: inline-block; padding-bottom: 5px; }
 
-    /* ABOUT ME SECTION WITH PHOTO */
-    .about-container { display: flex; align-items: flex-start; gap: 3rem; }
-    .about-text { flex: 2; }
-    .about-photo { flex: 1; }
+    /* ABOUT ME SECTION */
+    .about-container { display: flex; align-items: flex-start; gap: 4rem; }
+    .about-text { flex: 2; font-size: 1.1rem; color: #444; }
+    .about-photo { flex: 1; text-align: center; }
     .about-photo img { 
       width: 100%; 
+      max-width: 300px;
       border-radius: 12px; 
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
     }
+    .social-icons img {
+      width: 24px;
+      margin: 0 10px;
+      transition: transform 0.2s;
+    }
+    .social-icons img:hover { transform: scale(1.1); }
 
     /* FADE-IN ANIMATION */
-    .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+    .reveal { opacity: 0; transform: translateY(30px); transition: all 1s ease-out; }
     .reveal.active { opacity: 1; transform: translateY(0); }
 
+    /* RESPONSIVE */
     @media (max-width: 768px) {
       .hero-text h1 { font-size: 2.5rem; }
       .about-container { flex-direction: column; text-align: center; }
-      .about-photo { order: -1; max-width: 250px; margin: 0 auto; }
+      .about-photo { order: -1; margin: 0 auto; }
+      .hero-links a { display: block; margin-bottom: 10px; width: fit-content; }
     }
   </style>
 </head>
@@ -77,8 +103,14 @@
   <section id="hero">
     <div class="hero-text">
       <h1>Rachel Hurley</h1>
-      <h2>PhD Candidate – Civil, Environmental, & Architectural Engineering</h2>
+      <h2>PhD Candidate – Civil, Environmental,<br>& Architectural Engineering</h2>
       <p>Worcester Polytechnic Institute (WPI)</p>
+      
+      <div class="hero-links">
+        <a href="mailto:rhurley@wpi.edu">rhurley@wpi.edu</a>
+        <a href="https://scholar.google.com/citations?user=VKeRPwMAAAAJ&hl=en" target="_blank" style="opacity:0.8;">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/rachel-hurley1/" target="_blank" style="opacity:0.8;">LinkedIn</a>
+      </div>
     </div>
   </section>
 
@@ -87,34 +119,45 @@
     <div class="about-container">
       <div class="about-text">
         <p>
-          I am a PhD student and researcher at WPI focusing on environmental health and indoor air quality. 
-          My work specifically examines the behavior of wildfire-sourced volatile organic compounds (VOCs) 
-          and how they penetrate and persist in common indoor materials.
+          I am a PhD student and researcher at WPI specializing in the intersection of environmental engineering and public health. My research focuses on the transport and persistence of wildfire-sourced pollutants within indoor environments.
         </p>
         <br>
         <p>
-          Through my research, I aim to bridge the gap between engineering and social science to better 
-          protect public health during environmental disasters.
+          By leveraging advanced analytical techniques like Vocus CI-ToF mass spectrometry, I investigate how building materials act as reservoirs for hazardous compounds, with the ultimate goal of improving occupant safety and resilience.
         </p>
       </div>
+      
       <div class="about-photo">
-        <img src="profile.jpg" alt="Rachel Hurley Headshot">
+        <img src="profile.jpg" alt="Rachel Hurley">
+        <div class="social-icons">
+           <a href="https://scholar.google.com/citations?user=VKeRPwMAAAAJ&hl=en" target="_blank">
+             <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="Google Scholar">
+           </a>
+           <a href="https://www.linkedin.com/in/rachel-hurley1/" target="_blank">
+             <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+           </a>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="resume" class="reveal" style="background: #fafafa;">
+  <section id="resume" class="reveal" style="background: #fcfcfc;">
     <h2 class="section-title">Resume</h2>
-    </section>
+    <p>Content for your resume and CV goes here...</p>
+  </section>
 
   <section id="research" class="reveal">
-    <h2 class="section-title">Research & Projects</h2>
-    </section>
+    <h2 class="section-title">Research</h2>
+    <p>Content for your wildfire VOC research and publications goes here...</p>
+  </section>
 
   <script>
+    // Reveal animation logic
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('active');
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
       });
     }, { threshold: 0.1 });
 
