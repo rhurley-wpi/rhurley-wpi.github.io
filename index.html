@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rachel Hurley - Portfolio</title>
   <style>
-    /* GLOBAL STYLES */
+    /* 1. GLOBAL STYLES */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; background-color: #fff; }
 
-    /* HEADER & NAV */
+    /* 2. HEADER & NAV */
     header {
       position: fixed;
       top: 0; width: 100%;
@@ -26,7 +26,7 @@
     nav a { margin-left: 2rem; text-decoration: none; color: #555; font-weight: 500; transition: 0.3s; }
     nav a:hover { color: #8eab87; }
 
-    /* HERO SECTION */
+    /* 3. HERO SECTION */
     #hero {
       height: 85vh; 
       background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('wpi-header.jpg') center/cover no-repeat;
@@ -37,9 +37,8 @@
     }
     .hero-text h1 { font-size: 3.5rem; margin-bottom: 0.5rem; line-height: 1.1; }
     .hero-text h2 { font-size: 1.6rem; font-weight: 300; line-height: 1.4; margin-bottom: 0.5rem; }
-    .hero-text p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 1.5rem; }
-
-    /* HERO LINKS */
+    
+    .hero-links { margin-top: 20px; }
     .hero-links a {
       color: white;
       text-decoration: none;
@@ -47,36 +46,51 @@
       font-size: 0.95rem;
       border-bottom: 1px solid rgba(255,255,255,0.3);
       padding-bottom: 2px;
-      transition: all 0.3s ease;
     }
-    .hero-links a:hover { border-bottom-color: #fff; opacity: 1 !important; }
 
-    /* CONTENT SECTIONS */
-    section { padding: 100px 10%; min-height: 60vh; }
+    /* 4. CONTENT SECTIONS */
+    section { 
+      padding: 100px 10%; 
+      max-width: 1100px; 
+      margin: 0 auto; 
+      min-height: 60vh; 
+    }
     h2.section-title { font-size: 2rem; margin-bottom: 2rem; border-bottom: 2px solid #a9c8a2; display: inline-block; padding-bottom: 5px; }
 
-    /* ABOUT ME SECTION */
+    /* ABOUT ME STYLES */
     .about-container { display: flex; align-items: flex-start; gap: 4rem; }
     .about-text { flex: 2; font-size: 1.1rem; color: #444; }
     .about-photo { flex: 1; text-align: center; }
-    .about-photo img { width: 100%; max-width: 300px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 1rem; }
-    .social-icons img { width: 24px; margin: 0 10px; transition: transform 0.2s; }
-    .social-icons img:hover { transform: scale(1.1); }
+    .about-photo img { width: 100%; max-width: 300px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
 
-    /* FADE-IN ANIMATION */
-    .reveal { opacity: 0; transform: translateY(30px); transition: all 1s ease-out; }
-    .reveal.active { opacity: 1; transform: translateY(0); }
+    /* 5. FADE-IN ANIMATION (Fail-safe: Default to visible) */
+    .reveal { 
+      opacity: 1; 
+      transform: translateY(0); 
+      transition: all 1s ease-out; 
+    }
+    /* If JS works, it starts hidden then fades in */
+    .js-enabled .reveal { 
+      opacity: 0; 
+      transform: translateY(30px); 
+    }
+    .js-enabled .reveal.active { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
 
     /* RESPONSIVE */
     @media (max-width: 768px) {
+      #hero { padding: 0 5%; }
       .hero-text h1 { font-size: 2.5rem; }
       .about-container { flex-direction: column; text-align: center; }
-      .about-photo { order: -1; margin: 0 auto; }
-      .hero-links a { display: block; margin-bottom: 10px; width: fit-content; }
+      .about-photo { order: -1; margin: 0 auto 2rem; }
     }
   </style>
 </head>
 <body>
+
+  <script>document.body.classList.add('js-enabled');</script>
 
   <header>
     <a href="#hero" class="logo">Rachel Hurley</a>
@@ -87,7 +101,7 @@
     </nav>
   </header>
 
-  <section id="hero">
+  <section id="hero" style="max-width: 100%; margin: 0;">
     <div class="hero-text">
       <h1>Rachel Hurley</h1>
       <h2>PhD Candidate – Civil, Environmental,<br>& Architectural Engineering</h2>
@@ -106,16 +120,12 @@
       <div class="about-text">
         <p>I am a third-year PhD candidate in Civil, Environmental, and Architectural Engineering at <strong>Worcester Polytechnic Institute (WPI)</strong>, where I am also affiliated with the Department of Fire Protection Engineering. Advised by Professor Shichao Liu, my research investigates the intersection of indoor air quality, wildfire smoke transport, and occupant health.</p>
         <br>
-        <p>My work seeks to enhance resilience against both indoor and outdoor pollutants. By investigating both laboratory-scale experiments and behavioral psychology models, I aim to understand how the built environment, material properties and human decision-making prolong or mitigate smoke exposure.</p>
+        <p>My work seeks to enhance resilience against both indoor and outdoor pollutants. By investigating laboratory-scale experiments and behavioral psychology models, I aim to understand how the built environment, material properties, and human decision-making prolong or mitigate smoke exposure. I am particularly interested in community-engaged research and disaster readiness plans.</p>
         <br>
-        <p>Before my doctoral studies, I conducted research at <strong>Lafayette College</strong> and at <strong>WPI</strong> investigating the cognitive impacts of CO2 exposure. My goal is to transition into a post-doctoral or faculty position in related fields including environmental science and engineering.</p>
+        <p>Before my doctoral studies, I conducted research at <strong>Lafayette College</strong> focused on flash flooding and at <strong>WPI</strong> on cognitive impacts of CO2 exposure. My goal is to transition into a post-doctoral or faculty position in related environmental science and engineering fields.</p>
       </div>
       <div class="about-photo">
         <img src="profile.jpg" alt="Rachel Hurley">
-        <div class="social-icons">
-           <a href="https://scholar.google.com/citations?user=VKeRPwMAAAAJ&hl=en" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="Google Scholar"></a>
-           <a href="https://www.linkedin.com/in/rachel-hurley1/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
-        </div>
       </div>
     </div>
   </section>
@@ -127,17 +137,15 @@
       <p>PhD Civil Engineering (in progress) | GPA 4.0 | Aug 2023 – Present</p>
       <br>
       <h4>Lafayette College, Easton, PA</h4>
-      <p>BS Integrative Engineering | GPA 4.0 Co-Valedictorian | May 2023</p>
+      <p>BS Integrative Engineering: Environment & Energy | GPA 4.0 Co-Valedictorian | May 2023</p>
     </div>
 
     <h2 class="section-title">Awards & Honors</h2>
-    <div style="margin-bottom: 2rem;">
-      <p><strong>WPI 3MT Competition</strong> – Second Place (Feb 2026)</p>
-      <p><strong>NSF Graduate Research Fellow</strong> – Awarded 2023</p>
-      <p><strong>ASHRAE Grant-in-Aid Award</strong> – Awarded 2025</p>
-    </div>
-
-    <h3 style="font-size: 1.1rem; text-transform: uppercase; color: #666; border-bottom: 1px solid #eee; margin-bottom: 1rem;">Undergraduate Honors</h3>
+    <p><strong>WPI 3MT Competition</strong> – Second Place (Feb 2026)</p>
+    <p><strong>NSF Graduate Research Fellow</strong> – Awarded 2023</p>
+    <p><strong>ASHRAE Grant-in-Aid Award</strong> – Awarded 2025</p>
+    <br>
+    <h3 style="font-size: 1.1rem; text-transform: uppercase; color: #666; border-bottom: 1px solid #eee; margin-bottom: 1rem;">Undergraduate Honors (Lafayette)</h3>
     <p><strong>Marquis Scholar</strong> (2019 – 2023)</p>
     <p><strong>Phi Beta Kappa</strong> (2021)</p>
   </section>
@@ -146,20 +154,22 @@
     <h2 class="section-title">Publications</h2>
     <p style="margin-bottom: 1.2rem;">Hurley, R., et al. (2026). <strong>Indoor wildfire smoke perceptions “nudge” mitigation behaviors</strong>. <em>Indoor Environments</em>. <a href="https://doi.org/10.1016/j.indenv.2026.100150" target="_blank">[DOI]</a></p>
     <p style="margin-bottom: 1.2rem;">Hurley, R., et al. (2025). <strong>Impact of mask-wearing-related CO2 exposure</strong>. <em>Building and Environment</em>. <a href="https://doi.org/10.1016/j.buildenv.2025.113537" target="_blank">[DOI]</a></p>
+    <p style="margin-bottom: 1.2rem;">Hurley, R. F., et al. (2024). <strong>High CO2 exposure unlikely to impair cognition</strong>. <em>Energy and Built Environment</em>. <a href="https://doi.org/10.1016/j.enbenv.2024.05.005" target="_blank">[DOI]</a></p>
   </section>
 
-  <section id="research" class="reveal" style="max-width: 900px; margin: 0 auto;">
-    <h2 class="section-title">Recent Projects and Service</h2>
+  <section id="research" class="reveal" style="background: #fcfcfc;">
+    <h2 class="section-title">Recent Projects</h2>
     <div style="margin-bottom: 3.5rem;">
       <h3>ISIAQ Student Representative</h3>
-      <p>Board of Directors | 2024 – Present</p>
-      <p>Collaborating with professionals to build student mentoring and networking activities.</p>
+      <p><em>Board of Directors | 2024 – Present</em></p>
+      <p>Working to build student mentoring and networking activities for international air quality conferences.</p>
     </div>
 
     <div style="margin-bottom: 3.5rem;">
       <h3>NSF GEOHEALTH Intern — Aerodyne Research</h3>
-      <img src="IMG_5233 (3).jpg" alt="Vocus CI-ToF" style="width: 450px; border-radius: 8px; margin: 15px 0;">
-      <p>Using Vocus CI-ToF mass spectrometry for real-time VOC analysis.</p>
+      <p><em>Fall 2024</em></p>
+      <img src="IMG_5233 (3).jpg" alt="Vocus CI-ToF" style="max-width: 450px; width: 100%; border-radius: 8px; margin: 15px 0;">
+      <p>Real-time VOC analysis using Vocus CI-ToF mass spectrometry to study building material emissions.</p>
     </div>
   </section>
 
